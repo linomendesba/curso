@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Domine as técnicas de análise avançada com o Curso Completo de Análise Avançada. Invista no seu futuro com um desconto exclusivo na pré-venda!">
+    <link rel="shortcut icon" href="img/favicon-16x16.png" type="image/x-icon">
+    <title>Lino | Análise Avançada</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #0B3D2E;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+    
+        header {
+            background-color: #0B3D2E;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+    
+        header img {
+            width: 200px;
+        }
+    
+        .header-links {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            margin-top: 10px;
+        }
+    
+        .header-links a {
+            color: #FDD835;
+            text-decoration: none;
+            margin-left: 15px;
+            font-weight: bold;
+        }
+    
+        @media (max-width: 768px) {
+            .header-links {
+                flex-direction: column;
+                margin-top: 10px;
+            }
+    
+            .header-links a {
+                margin: 5px 0;
+            }
+        }
+    
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    
+        h1, h2, h3, p {
+            text-align: center;
+        }
+    
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    
+        .intro-text {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #ffffff;
+            background-color: #123D2E;
+            padding: 40px;
+            border: 2px solid #FDD835;
+            border-radius: 10px;
+            text-align: left;
+            margin-top: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+    
+        .video {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    
+        .video iframe {
+            width: 100%;
+            max-width: 700px;
+            height: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+    
+        .cta-button {
+            background-color: #FDD835;
+            color: #0B3D2E;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 20px 0;
+            transition: background-color 0.3s ease;
+        }
+    
+        .cta-button:hover {
+            background-color: #FBC02D;
+        }
+    
+        .preco, .bonus, .pix, .depoimentos, .faq {
+            background-color: #123D2E;
+            padding: 30px;
+            border: 2px solid #FDD835;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+    
+        .preco h2, .pix h2, .bonus h3, .depoimentos h2, .faq h2 {
+            font-size: 24px;
+            color: #FDD835;
+        }
+    
+        .bonus ul, .faq ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    
+        .bonus ul li, .faq ul li {
+            font-size: 18px;
+            padding: 10px;
+            border-bottom: 1px solid #FDD835;
+        }
+    
+        .contador {
+            font-size: 30px;
+            font-weight: bold;
+            background-color: #fdd835;
+            color: #0B3D2E;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            margin: 20px 0;
+            text-align: center;
+        }
+    
+        .contador-line {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            margin: 20px 0;
+        }
+    
+        .pix button {
+            background-color: #FDD835;
+            color: #0B3D2E;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+    
+        .pix button:hover {
+            background-color: #FBC02D;
+        }
+    
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0B3D2E;
+            color: #ffffff;
+        }
+    
+        /* Responsividade */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+    
+            .video iframe {
+                height: 250px;
+            }
+    
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+    
+            .preco h2, .pix h2, .bonus h3, .depoimentos h2, .faq h2 {
+                font-size: 20px;
+            }
+    
+            .pix button {
+                padding: 10px 20px;
+            }
+    
+            .contador {
+                font-size: 24px;
+            }
+    
+            .intro-text, .conteudo-curso {
+                padding: 20px;
+            }
+    
+            .conteudo-curso h2 {
+                font-size: 24px;
+            }
+    
+            .conteudo-curso p, .conteudo-curso ul li {
+                font-size: 16px;
+            }
+        }
+    
+        .conteudo-curso {
+            background-color: #123D2E;
+            padding: 40px;
+            border: 2px solid #FDD835;
+            border-radius: 10px;
+            text-align: left;
+            margin-top: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+    
+        .conteudo-curso h2 {
+            font-size: 28px;
+            color: #FDD835;
+            margin-bottom: 15px;
+        }
+    
+        .conteudo-curso p {
+            font-size: 20px;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+    
+        .conteudo-curso ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+    
+        .conteudo-curso ul li {
+            font-size: 18px;
+            color: #ffffff;
+            padding: 10px 0;
+            position: relative;
+        }
+    
+        .conteudo-curso ul li::before {
+            content: "✔️";
+            color: #FDD835;
+            position: absolute;
+            left: -25px;
+            font-size: 20px;
+        }
+
+        .depoimentos {
+            background-color: #123D2E;
+            padding: 40px;
+            border: 2px solid #FDD835;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+    
+        .depoimentos h2 {
+            font-size: 28px;
+            color: #FDD835;
+            margin-bottom: 20px;
+        }
+    
+        .depoimento {
+            margin-bottom: 20px;
+        }
+    
+        .depoimento p {
+            font-size: 18px;
+            color: #ffffff;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+    
+        .depoimento span {
+            font-size: 16px;
+            color: #FDD835;
+            font-weight: bold;
+        }
+
+        .faq {
+            background-color: #123D2E;
+            padding: 40px;
+            border: 2px solid #FDD835;
+            border-radius: 10px;
+            text-align: left;
+            margin-top: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .faq h2 {
+            font-size: 28px;
+            color: #FDD835;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .faq ul {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq ul li {
+            font-size: 18px;
+            color: #ffffff;
+            padding: 10px 0;
+            border-bottom: 1px solid #FDD835;
+        }
+
+        .faq ul li::before {
+            content: "❓";
+            color: #FDD835;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        .blinking-text {
+            font-size: 30px;
+            font-weight: bold;
+            color: #FDD835;
+            background-color: #123D2E;
+            text-align: center;
+            animation: blinking 1.5s infinite;
+        }
+
+        @keyframes blinking {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Botão para scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+    <!-- Pré-carregamento de fontes e ícones -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header>
+    <img src="img/logo.png" alt="Logo Lino">
+    <div class="header-links">
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://t.me/mentorlino" target="_blank">Telegram</a>
+        <a href="https://www.youtube.com/@Mentorlino" target="_blank">YouTube</a>
+    </div>
+</header>
+
+<!-- Contador fixo abaixo do cabeçalho -->
+<div class="contador">
+    <div class="contador-line">
+        <span>Pré-venda termina em:</span>
+        <div id="countdown" style="margin-left: 10px;"></div>
+    </div>
+</div>
+<h2 class="blinking-text">Lançamento Oficial no dia 01 de Novembro de 2024</h2>
+
+<div class="container">
+    <h1>Transforme Suas Estratégias de Investimento com Análise Avançada de Gráficos em Linha</h1>  
+    <!-- Seção do vídeo -->
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/uyMRGlFKOUc" frameborder="0" allowfullscreen loading="lazy"></iframe>
+    </div>
+
+    <!-- Texto de apresentação -->
+    <p class="intro-text">
+      Em um mercado competitivo e em constante mudança, a capacidade de realizar uma análise avançada de gráficos em linha é o diferencial que pode elevar seus resultados para um novo patamar.
+      Para quem busca se destacar, entender os pontos-chave como suporte, resistência, amplitude, volatilidade e comportamento de tendências é essencial.
+      Ao dominar essas técnicas, você não apenas antecipa os movimentos do mercado, mas também toma decisões mais seguras e embasadas, minimizando riscos e maximizando oportunidades.<br><br>
+      
+      O Curso Análise Avançada Gráfico em Linha oferece um aprofundamento exclusivo nas técnicas que os traders profissionais utilizam para prever e reagir às mudanças de mercado.
+      Com um foco em indicadores avançados, análise de momentum, volatilidade e padrões de comportamento, você desenvolverá uma visão crítica e estratégica que vai além da superfície dos gráficos.
+      Esse curso é ideal para traders que querem transformar seu nível de operação, aprimorando suas habilidades e estratégias de investimento com mais confiança.
+    </p>
+
+    <!-- Seção sobre o conteúdo do curso -->
+    <div class="conteudo-curso">
+        <h2>O que você irá aprender</h2>
+        <p>Este curso abrangente de Análise Avançada Gráfico em Linha foi projetado para equipá-lo com as ferramentas e técnicas necessárias para se destacar no Futebol Virtual. Ao longo das aulas, você irá aprender:</p>
+        <ul>
+            <li>Análise de Tendências Avançadas.</li>
+            <li>Padrões Gráficos Complexos.</li>
+            <li>Modelagem Quantitativa.</li>
+            <li>Análise de Ciclos de Mercado.</li>
+            <li>Indicadores Técnicos Avançados.</li>
+            <li>Integração com Análise de Volume.</li>
+            <li>Gestão de Risco e Psicologia de Mercado.</li>
+            <li>Suporte individualizado para dúvidas.</li>
+            <li>E-books e vídeos aprofundados.</li>
+        </ul>
+        <p>"Com mais de 4 horas de conteúdo gravado em alta qualidade e um e-book exclusivo para cada aula, ao final do curso você estará plenamente capacitado para aplicar essas técnicas em suas estratégias de investimento, potencializando suas chances de sucesso no mercado de Futebol Virtual."</p>
+    </div>
+
+    <section id="sobre-mim" style="text-align: center; padding: 20px;">
+      <h2>Sobre Mim</h2>
+      <img src="img/foto.png" alt="Minha Foto" style="border-radius: 50%; width: 150px; height: 150px;">
+      <p>Olá! Meu nome é Lino Mendes, e eu sou um apaixonado por análise de gráficos e estratégias de investimento. Com anos de experiência no mercado, dedico meu tempo a ajudar outras pessoas a alcançarem seus objetivos financeiros através do conhecimento e da prática. No meu curso de Análise Avançada, busco compartilhar tudo o que aprendi ao longo dos anos.</p>
+      <p>Estou sempre em busca de novas técnicas e estratégias, e adoraria compartilhar essa jornada com você!</p>
+  </section>
+  
+    <!-- Preço e pré-venda -->
+    <div class="preco">
+        <h2>Invista no seu futuro: <br>De <s>R$ 400,00</s> por apenas <strong>R$ 250,00</strong> na Pré-venda!</h2>
+        <a href="#pagamento" class="cta-button">Garanta agora por Pix</a>
+    </div>
+
+    <!-- Bônus inclusos -->
+    <div class="bonus">
+        <h3>🎁 Bônus Exclusivos na Pré-venda</h3>
+        <ul>
+            <li>1 Mês Grátis no Grupo de Estudos: Ao adquirir o curso, o aluno terá direito a 1 mês grátis de acesso ao grupo de estudos geral, que incluirá:</li>
+            <li>Lives exclusivas.</li>
+            <li>Estratégias Semanais: Novas estratégias serão abordadas a cada semana, permitindo um aprendizado contínuo.</li>
+            <li>Atualização de Análises: Análises atualizadas regularmente para refletir as últimas tendências do mercado.</li>
+            <li>Temas Novos Abordados: Cada semana terá um tema específico para discussão, sempre com novas técnicas e conteúdos avançados.</li>
+            <li>PDF: Materiais complementares em formato PDF para apoio ao aprendizado.</li>
+            <li>Canal de Suporte: Acesso a um canal de suporte para tirar dúvidas e receber orientações.</li>
+            <li>Mensalidade do Grupo de Estudos: Após o primeiro mês gratuito, a mensalidade para continuar no grupo será de R$ 50,00.</li>
+        </ul>
+    </div>
+
+    <!-- Seção de Depoimentos -->
+    <div class="depoimentos" id="depoimentos">
+        <h2>O que nossos alunos dizem</h2>
+        <div class="depoimento">
+            <p>""Boa noite, Lino! Quero te agradecer muito pelos seus ensinamentos! Estou conseguindo operar com muito mais confiança e precisão, e tudo graças às suas aulas. Minha meta era acertar 70% das operações, mas depois de aplicar suas estratégias, estou com 85% de acerto! Incrível o quanto evoluí! Valeu demais, de coração!!!"</p>
+            <span>- João Silva</span>
+        </div>
+        <div class="depoimento">
+            <p>"Lino, só passando para agradecer! Depois de acompanhar suas análises e seguir suas dicas, meu rendimento nas operações melhorou muito. Hoje consegui bater minha meta do mês em apenas 2 semanas! Seu conteúdo realmente faz toda a diferença. Obrigado por compartilhar tanto conhecimento de forma tão clara e eficiente!"</p>
+            <span>- Maria Oliveira</span>
+        </div>
+        <div class="depoimento">
+            <p>"Lino! Tô muito feliz com meu progresso desde que comecei a seguir seus ensinamentos! Antes eu errava muito, mas agora, com as técnicas que você ensinou, já tô operando com muito mais assertividade e confiança. Consegui bater minha meta da semana em apenas um dia! Muito obrigado mesmo, você mudou minha forma de operar!"</p>
+            <span>- Carlos Eduardo</span>
+        </div>
+        <!-- Adicione mais depoimentos conforme necessário -->
+    </div>
+
+    <!-- Perguntas Frequentes (FAQ) -->
+    <div class="faq" id="faq">
+        <h2>Perguntas Frequentes</h2>
+        <ul>
+            <li><strong>Como faço para acessar o curso após a compra?</strong>
+                <br>Após a confirmação do pagamento, você srá adcionado nos grupos no Telegram.
+            </li>
+            <li><strong>O curso é compatível com dispositivos móveis?</strong>
+                <br>Sim! Todo o conteúdo do curso pode ser acessado de qualquer dispositivo, seja computador, tablet ou smartphone.
+            </li>
+            <li><strong>Quais métodos de pagamento são aceitos além do Pix?</strong>
+                <br>Atualmente, estamos oferecendo pagamento via Pix, mas em breve adicionaremos outras opções como cartão de crédito e boleto bancário.
+            </li>
+            <li><strong>Haverá atualizações futuras no curso?</strong>
+                <br>Sim, todos os alunos terão acesso vitalício às atualizações do curso sem custo adicional.
+            </li>
+            <li><strong>Preciso ter conhecimento prévio para fazer o curso?</strong>
+                <br>Sim, o curso é uma continuação dos estudos gratuitos no meu canal do Youtube, logo preciso que acompanhe minha aulas gratuitas
+            </li>
+            <!-- Adicione mais perguntas conforme necessário -->
+        </ul>
+    </div>
+
+    <!-- Área de pagamento via Pix -->
+    <div class="pix" id="pagamento">
+        <h2>Pague com Pix</h2>
+        <p>Escaneie o QR Code abaixo ou copie e cole o código Pix para realizar seu pagamento:</p>
+        <img src="img/qrcode.png" alt="QR Code Pix" width="200" loading="lazy">
+        <p>Código Celular Pix: <strong>+5575991103046</strong></p>
+
+        <!-- Botão para enviar comprovante no Telegram -->
+        <h3>Envie o comprovante de pagamento:</h3>
+        <button onclick="window.open('https://t.me/Suporte_Lino', '_blank')">Enviar Comprovante no Telegram</button>
+        <p>Envie seu nome e contato anexado!</p>
+    </div>
+
+
+    <footer>
+        <p>© 2024 Lino Mendes | Análise Avançada Gráfico em Linha. Todos os direitos reservados.</p>
+    </footer>
+    
+</div>
+
+<script>
+// Função para iniciar o contador
+function startCountdown() {
+    const countdownElement = document.getElementById("countdown");
+    
+    // Data de início: 05 de Outubro de 2024, 00:00:00
+    const startDate = new Date(2024, 9, 5, 0, 0, 0).getTime(); // Mês 9 representa Outubro (0-indexed)
+
+    // Data de término: 05 de Novembro de 2024, 23:59:59
+    const endDate = new Date(2024, 10, 5, 23, 59, 59).getTime(); // Mês 10 representa Novembro (0-indexed)
+
+    // Verifique se a data atual é menor que a data de início
+    const now = new Date().getTime();
+    if (now < startDate) {
+        countdownElement.innerHTML = "A pré-venda ainda não começou!";
+        return;
+    }
+
+    const interval = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = endDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Atualiza o conteúdo do contador
+        countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+        // Se o contador terminar
+        if (distance < 0) {
+            clearInterval(interval);
+            countdownElement.innerHTML = "A pré-venda encerrou!";
+        }
+    }, 1000);
+}
+
+// Inicia o contador
+startCountdown();
+
+// Removido o código do carrossel, pois não estava sendo utilizado
+
+</script>
+
+<!-- Fallback caso o JavaScript não carregue -->
+<noscript>
+    <div class="contador">
+        <h2>A pré-venda está ativa! Faça seu pagamento antes do prazo terminar.</h2>
+    </div>
+</noscript>
+
+</body>
+</html>
