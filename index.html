@@ -190,9 +190,22 @@
                 font-size: 28px;
             }
     
-            .video iframe {
-                height: 250px;
-            }
+            .video {
+    position: relative;
+    padding-bottom: 56.25%; /* Mantém a proporção 16:9 */
+    height: 0; /* Altura inicial */
+    overflow: hidden; /* Oculta overflow */
+    max-width: 1200px; /* Largura máxima desejada */
+    margin: 0 auto; /* Centraliza o vídeo */
+}
+
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1200px; /* Largura fixa desejada */
+    height: 675px; /* Altura fixa desejada */
+}
     
             .cta-button {
                 padding: 10px 20px;
@@ -387,10 +400,11 @@
 
 <div class="container">
     <h1>Transforme Suas Estratégias de Investimento com Análise Avançada de Gráficos em Linha</h1>  
-    <!-- Seção do vídeo -->
-    <div class="video">
-      <iframe src="https://www.youtube.com/embed/uyMRGlFKOUc" frameborder="0" allowfullscreen loading="lazy"></iframe>
-    </div>
+<!-- Seção do vídeo -->
+<div class="video">
+    <iframe src="https://www.youtube.com/embed/buLkDUDA3lc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+</div>
+
 
     <!-- Texto de apresentação -->
     <p class="intro-text">
